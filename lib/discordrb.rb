@@ -35,6 +35,18 @@ module Discordrb
     direct_message_typing: 1 << 14
   }.freeze
 
+
+  COMMAND_CONTEXTS = {
+    guild: 0,
+    bot_dm: 1,
+    private_channel: 2
+  }.freeze
+
+  COMMAND_INTEGRATION_TYPES = {
+    guild_install: 0,
+    user_install: 1
+  }.freeze
+  
   # All available intents
   ALL_INTENTS = INTENTS.values.reduce(&:|)
 
